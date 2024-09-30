@@ -1,3 +1,7 @@
+<?php 
+include 'functions.php'; 
+?>
+
 <?php
 // Define the team array (same as in index.php)
 $team = [
