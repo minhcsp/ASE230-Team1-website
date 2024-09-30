@@ -205,46 +205,29 @@ if (array_key_exists($id, $team)) {
                         <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
                         <div class="resume-section-content">
                             <div class="resume-timeline position-relative">
-                                <article class="resume-timeline-item position-relative pb-5">
+                                <?php
+                                    $skills = [$member['skill1'], $member['skill2']];
 
-                                    <div class="resume-timeline-item-header mb-2">
-                                        <div class="d-flex flex-column flex-md-row">
-                                            <h3 class="resume-position-title font-weight-bold mb-1"><?php echo $member['title1']; ?></h3>
-                                            <div class="resume-company-name ms-auto"><?php echo $member['place1']; ?></div>
-                                        </div><!--//row-->
-                                        <div class="resume-position-time"><?php echo $member['timeline1']; ?></div>
-                                    </div><!--//resume-timeline-item-header-->
-                                    <div class="resume-timeline-item-desc">
-                                        <p><?php echo $member['description1']; ?></p>
+                                    echo displayWorkExperience(
+                                        $member['title1'], 
+                                        $member['place1'], 
+                                        $member['timeline1'], 
+                                        $member['description1'], 
+                                        $skills
+                                    );
+                                ?>
 
-                                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?php echo $member['skill1']; ?></span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?php echo $member['skill2']; ?></span></li>
-                                        </ul>
-                                    </div><!--//resume-timeline-item-desc-->
+                                <?php
+                                    $skills = [$member['skill3'], $member['skill4']];
 
-                                </article><!--//resume-timeline-item-->
-
-                                <article class="resume-timeline-item position-relative pb-5">
-
-                                    <div class="resume-timeline-item-header mb-2">
-                                        <div class="d-flex flex-column flex-md-row">
-                                            <h3 class="resume-position-title font-weight-bold mb-1"><?php echo $member['title2']; ?></h3>
-                                            <div class="resume-company-name ms-auto"><?php echo $member['place2']; ?></div>
-                                        </div><!--//row-->
-                                        <div class="resume-position-time"><?php echo $member['timeline2']; ?></div>
-                                    </div><!--//resume-timeline-item-header-->
-                                    <div class="resume-timeline-item-desc">
-                                        <p> <?php echo $member['description2']; ?></p>
-                                        <ul class="list-inline">
-                                            <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?php echo $member['skill3']; ?></span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?php echo $member['skill4']; ?></span></li>
-                                        </ul>
-                                    </div><!--//resume-timeline-item-desc-->
-
-
-
+                                    echo displayWorkExperience(
+                                        $member['title2'], 
+                                        $member['place2'], 
+                                        $member['timeline2'], 
+                                        $member['description2'], 
+                                        $skills
+                                    );
+                                ?>
                             </div><!--//resume-timeline-->
 
 
@@ -317,8 +300,6 @@ if (array_key_exists($id, $team)) {
                             </ul>
                         </div>
                     </section><!--//education-section-->
-
-
 
     </div>
 </article>

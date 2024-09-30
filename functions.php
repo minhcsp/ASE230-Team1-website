@@ -32,4 +32,31 @@ function displayMemberCard($member) {
         </div>
     </header>";
 }
+
+function displayWorkExperience($title, $place, $timeline, $description, $skills) {
+    $skillHTML = '';
+    foreach ($skills as $skill) {
+        $skillHTML .= "<li class='list-inline-item'><span class='badge bg-secondary badge-pill'>$skill</span></li>";
+    }
+
+    return "
+        <article class='resume-timeline-item position-relative pb-5'>
+            <div class='resume-timeline-item-header mb-2'>
+                <div class='d-flex flex-column flex-md-row'>
+                    <h3 class='resume-position-title font-weight-bold mb-1'>$title</h3>
+                    <div class='resume-company-name ms-auto'>$place</div>
+                </div>
+                <div class='resume-position-time'>$timeline</div>
+            </div>
+            <div class='resume-timeline-item-desc'>
+                <p>$description</p>
+                <h4 class='resume-timeline-item-desc-heading font-weight-bold'>Technologies used:</h4>
+                <ul class='list-inline'>
+                    $skillHTML
+                </ul>
+            </div>
+        </article>
+    ";
+}
+
 ?>
