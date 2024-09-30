@@ -8,25 +8,29 @@ $team = [
         "name" => "Minh Vu",
         "role" => "Student",
         "img" => "assets/images/minh.jpg",
-        "profile_link" => "detail.php?id=1"
+        "profile_link" => "detail.php?id=1",
+        "dob" => "2004-1-1"
     ],
     [
         "name" => "Khang Do",
         "role" => "Student",
         "img" => "assets/images/Kingston.jpg",
-        "profile_link" => "detail.php?id=2"
+        "profile_link" => "detail.php?id=2",
+        "dob" => "2002-1-1"
     ],
     [
         "name" => "Faizan Zikaria",
         "role" => "Student",
         "img" => "assets/images/pic.jpg",
-        "profile_link" => "detail.php?id=3"
+        "profile_link" => "detail.php?id=3",
+        "dob" => "1995-1-1"
     ],
     [
         "name" => "Zoe Smith",
         "role" => "Student",
         "img" => "assets/images/zoeSmith.jpg",
-        "profile_link" => "detail.php?id=4"
+        "profile_link" => "detail.php?id=4",
+        "dob" => "1997-1-1"
     ]
 ];
 ?>
