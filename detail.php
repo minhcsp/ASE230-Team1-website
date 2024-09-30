@@ -7,6 +7,7 @@ include 'functions.php';
 $team = [
     1 => [
         "name" => "Minh Vu",
+        "dob" => "2004-1-1",
         "role" => "Data Science Junior",
         "email" => "vum2@mymail.nku.edu",
         "phone" => "(859) 513-4830",
@@ -33,6 +34,7 @@ $team = [
     ],
     2 => [
         "name" => "Khang Do",
+        "dob" => "2002-1-1",
         "role" => "Data Analyst",
         "email" => "dok2@mymail.nku.edu",
         "phone" => "(859) 786-2702",
@@ -59,6 +61,7 @@ $team = [
     ],
     3 => [
     "name" => "Faizan Zikaria",
+    "dob" => "1995-1-1",
     "role" => "Senior Database Administrator",
     "email" => "zikariaf1@mymail.nku.edu",
     "phone" => "(773) 712-4984",
@@ -85,6 +88,7 @@ $team = [
     ],
     4 => [
         "name" => "Zoe Smith",
+        "dob" => "1997-1-1",
         "role" => "Database Designer",
         "email" => "Smithz10@mymail.nku.edu",
         "phone" => "(813) 842-9599",
@@ -160,7 +164,16 @@ if (array_key_exists($id, $team)) {
                 <div class="col">
                     <div class="row p-4 justify-content-center justify-content-md-between">
                         <div class="primary-info col-auto">
-                            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?php echo $member['name']; ?></h1>
+                            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">
+                                <?php
+                                echo $member['name'];
+                                ?>
+                            </h1>
+                            <div>
+                            <?php
+                                echo 'Age: ' . calculateAge($member['dob']) . ' years old';
+                                ?>
+                            </div>
                             <div class="title mb-3"><?php echo $member['role']; ?></div>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?php echo $member['email']; ?></a></li>
